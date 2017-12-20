@@ -27,6 +27,7 @@ const EK500_COLOURS = cgrad([RGB(1, 1, 1),
                   leg=true,
                   color=EK500_COLOURS,
                   size=(640,480),
+                  colorbar_title = "",
                   range=nothing)
 
 Uses Plots to plot an echogram of a.
@@ -42,6 +43,7 @@ function echogram(a; xlabel="Time / samples", ylabel=nothing,
                   leg=true,
                   color=EK500_COLOURS,
                   size=(640,480),
+                  colorbar_title = "",
                   range=nothing)
 
     if ylabel==nothing
@@ -95,7 +97,8 @@ function echogram(a; xlabel="Time / samples", ylabel=nothing,
 
     p = plot(layout=1, leg=leg, size=size,
              title=title, xaxis=xlabel, yaxis=ylabel,
-             yticks=yt, left_margin=10mm)
+             yticks=yt, left_margin=10mm,
+             colorbar_title=colorbar_title)
     Plots.heatmap!(a, yflip=true, color=color)
     return p
 
