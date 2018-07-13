@@ -25,7 +25,7 @@ ps =collect(pings(EK60_SAMPLE));
 ps38 = [p for p in ps if p.frequency == 38000];
 Sv38 = Sv(ps38);
 r = R(ps38);
-echogram(Sv38, title="38kHz volume backscatter", range=r)
+echogram(Sv38, title="38kHz volume backscatter", range=maximum(r))
 ```
 
 ## Bitmap
