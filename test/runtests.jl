@@ -1,5 +1,5 @@
 using EchogramPlots
-using Base.Test
+using Test
 
-# write your own tests here
-@test 1 == 2
+a = rand(100,100)
+echogram(a)
