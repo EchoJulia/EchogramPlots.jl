@@ -1,4 +1,3 @@
-__precompile__()
 module EchogramPlots
 
 using Plots
