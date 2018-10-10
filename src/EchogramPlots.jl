@@ -57,11 +57,11 @@ function echogram(a; xlabel="Time / samples", ylabel=nothing,
     # TODO From Julia 0.7 consider using missing?
 
     if vmax != nothing
-        a[a .> vmax] = vmax
+        a[a .> vmax] .= vmax
     end
 
     if vmin != nothing
-        a[a .< vmin] = vmin
+        a[a .< vmin] .= vmin
     end
 
     y, x = Base.size(a)
