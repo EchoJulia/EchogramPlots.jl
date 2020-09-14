@@ -1,4 +1,5 @@
 name = "EchogramPlots"
+uuid = "ca3b9080-f68d-11ea-2a4d-eba71caada40"
 authors = ["Rob Blackwell <rob@robblackwell.com>"]
 version = "0.1.0"
 
